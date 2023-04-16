@@ -22,9 +22,10 @@
 }
 
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background: #0c1d12;
+  background: #000d05;
   font-family: monospace;
   font-weight: bold;
   font-size: 14px;
