@@ -22,7 +22,6 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
   background: #000d05;
@@ -31,6 +30,7 @@ html, body {
   font-size: 14px;
   line-height: 16px;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 pre {
