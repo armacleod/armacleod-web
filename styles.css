@@ -1,0 +1,196 @@
+/* General styles */
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 4px;
+  background-color: #007700;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #0c1d12;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #0c1d12;
+}
+
+* {
+  scrollbar-color: #007700 #aaaaaa;
+  scrollbar-width: thin;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0c1d12;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+pre {
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 10px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1px;
+}
+
+a {
+  color: #000000;
+  text-shadow: 1px 1px 2px #00ff00, 0 0 1vmin #00ff00, 0 0 5px #00ff00;
+  text-decoration: none;
+}
+
+a:hover, hr {
+  color: #00ff00;
+}
+
+hr {
+  border-color: #00ff00;
+}
+
+.g {
+  color: #007700;
+}
+
+.lg {
+  color: #00b600;
+}
+
+.w {
+  color: #00ff00;
+}
+
+.by {
+  color: #0c1d12;
+}
+
+/* Selection styles */
+::-moz-selection {
+  color: #000000;
+  background: #00b600;
+}
+
+.g::-moz-selection, .by::-moz-selection {
+  color: #000000;
+}
+
+.lg::-moz-selection {
+  color: #000000;
+}
+
+.w::-moz-selection {
+  color: #000000;
+}
+
+::selection {
+  color: #000000;
+  background: #00b600;
+}
+
+.g::selection, .by::selection {
+  color: #000000;
+}
+
+.lg::selection {
+  color: #000000;
+}
+
+.w::selection {
+  color: #000000;
+}
+
+/* Overlay styles */
+.overlay {
+  top: 0;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.flicker {
+  pointer-events: none;
+  position: absolute;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+  z-index: 15;
+  background: rgba(9, 8, 8, 0.1);
+  animation: flicker 0.3301s infinite;
+}
+
+.scanline {
+  position: absolute;
+  pointer-events: none;
+  top: 0%;
+  width: auto;
+  min-width: 100%;
+  height: 2px;
+  z-index: 10;
+  background: rgba(0, 0, 0, .3);
+  opacity: 0.75;
+  animation: scanline 7.77s linear infinite;
+}
+
+.scanlines {
+  position: absolute;
+  pointer-events: none;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 100% 4px;
+  opacity: 0.33;
+}
+
+/* Keyframes for animations */
+@keyframes flicker {
+  0% {
+    opacity: 0.27489;
+  }
+  5.10204% {
+    opacity: 0.2;
+  }
+  22.44898% {
+    opacity: 0.8;
+  }
+  23.46939% {
+    opacity: 0.6;
+  }
+  35.71429% {
+    opacity: 0.8;
+  }
+  36.22449% {
+    opacity: 0.2;
+  }
+  79.59184% {
+    opacity: 0.6;
+  }
+  80.10204% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.27489;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
