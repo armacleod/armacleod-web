@@ -55,6 +55,15 @@ a:hover, hr {
   color: #00ff00;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
 hr {
   border-color: #00ff00;
 }
